@@ -5,8 +5,8 @@
 
 #header{
     height: 55px;
-    background-color: greenyellow;
-    border-bottom: 1px solid gray;
+    background-color: rgb(161, 235, 255);
+    border-bottom: 1px solid rgb(161, 235, 255);
 }
 
 #login {
@@ -24,7 +24,6 @@
 #banner {
     height: 265px;
     width: 1034px;
-    background-color: plum;
     margin: 0 auto;
 }
 
@@ -70,7 +69,7 @@
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 18px;
+    margin-top: 20px;
 }
 
 .character-card {
@@ -81,6 +80,7 @@
     margin-bottom: 35px;
     border: 1px solid rgb(181, 181, 181);
     border-radius: 12px;
+    overflow: hidden;
 }
 
 .character-img {
@@ -123,5 +123,5 @@
 
 #footer {
     height: 60px;
-    background-color: palevioletred;
+    background-color: rgb(103, 174, 245);
 }

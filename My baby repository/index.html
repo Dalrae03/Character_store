@@ -12,7 +12,7 @@
     </div>
     <div id = "body">
         <div id ="banner">
-            <img src="/images/banner/김 달.png">
+            <img src="/My baby repository/images/banner/김 달.png">
         </div>
         <div id="button-area">
             <button id="add">추가하기</button>
@@ -21,32 +21,17 @@
             <div class="genre"># 전체</div>
         </div>
         <div id="character-list">
+            <!--
             <div class="character-card">
                 <div>
-                    <img class="character-img" src="/images/character/주강아.png"/>
-                </div>
-                <div class="character-contents">
-                    <span class="character-name">주 강아</span>
-                    <div class="contents-sub">
-                        <span class="character-age">17세</span>
-                        <span> / </span>
-                        <span class="character-sex">남</span>
-                    </div>
-                    <div class="character-tags">
-                        <span class="character-tag"># 미소년</span>
-                    </div>
-                </div>
-            </div>
-            <div class="character-card">
-                <div>
-                    <img class="character-img" src="/images/character/유부.jpg"/>
+                    <img class="character-img" src="/My baby repository/images/character/유부.jpg"/>
                 </div>
                 <div class="character-contents">
                     <span class="character-name">유부</span>
                     <div class="contents-sub">
                         <span class="character-age">4세</span>
                         <span> / </span>
-                        <span class="character-sex">남</span>
+                        <span class="character-gender">남</span>
                     </div>
                     <div class="character-tags">
                         <span class="character-tag"># 깜찍이</span>
@@ -54,8 +39,51 @@
                     </div>
                 </div>
             </div>
+            -->
         </div>
     </div>
     <div id = "footer"></div>
 </body>
+<script>
+    var characters = [{
+        name : '주 강아',
+        age: 17,
+        gender: '남',
+        tag: ['# 미소년'],
+        imageUrl: '/My baby repository/images/character/주강아.png'
+    },{
+        name : '유부',
+        age: 4,
+        gender: '남',
+        tag: ['# 깜찍이', '# 강아띠'],
+        imageUrl: '/My baby repository/images/character/유부.jpg'
+    }];
+
+    let charactersHtml = '';
+    for(var i = 0; i < characters.length; i++){
+        var character = characters[i]
+        charactersHtml = 
+        charactersHtml + 
+        '<div class="character-card">'+
+                '<div>'+
+                    '<img class="character-img" src="' + character.imageUrl + '"/>'+
+                '</div>'+
+                '<div class="character-contents">'+
+                    '<span class="character-name">' + character.name + '</span>'+
+                    '<div class="contents-sub">'+
+                        '<span class="character-age">' + character.age + '세</span>'+
+                        '<span> / </span>'+
+                        '<span class="character-gender">' + character.gender + '</span>'+
+                    '</div>'+
+                    '<div class="character-tags">'
+                        for(var j = 0; j < character.tag.length; j++){
+                            + '<span class="character-tag">' + character.tag[j] + '</span>'
+                        } +
+                    '</div>'+
+                '</div>'+
+            '</div>'
+    }
+
+    document.querySelector("#character-list").innerHTML = charactersHtml;
+</script>
 </html>
