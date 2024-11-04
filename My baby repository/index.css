@@ -11,14 +11,20 @@
 
 #login {
     float: left;
-    margin: 8px 0;
+    margin: 8px;
 }
 
+html, body {
+    height: 100%;
+}
 
 
 #body {
     height: 100%;
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 가운데 정렬 옵션 */
 }
 
 #banner {
@@ -53,14 +59,14 @@
 }
 
 .genre {
-    width: 60px;
-    height: 30px;
-    border: 2px solid black;
-    margin: 10px;
-    border-radius: 10px;
-    text-align: center;
-    line-height: 30px;
+    margin-left: 10px;
 }
+
+
+.content {
+    flex: 1;
+}
+
 
 
 
